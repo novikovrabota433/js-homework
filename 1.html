@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "1">зашифровать</button>
+    <br>
+    <button id = "2">расшифровать</button>
+    <br>
+    <input id = "3" type="Ввод текста">
+    <br>
+    <output id = "4" type="Вывод текста">
+
+    <script>
+       var addTime = document.getElementById('1');
+
+addTime.addEventListener('click', function() {
+
+    var getNum = document.getElementById('3').value;
+
+    const offset = 9;
+    
+    let str = getNum;
+    //из символа в код
+    console.log(str.charCodeAt(0));
+    let out = '';
+    for (let i=0; i< str.length; i++){
+        let code = str.charCodeAt(i);
+    code = code + offset;
+    out += String.fromCharCode(code);
+}
+document.getElementById('4').innerText = out;
+});
+
+var addTime = document.getElementById('2');
+
+addTime.addEventListener('click', function() {
+
+    var getNum = document.getElementById('3').value;
+
+    const offset = -9;
+    
+    let str = getNum;
+    //из символа в код
+    console.log(str.charCodeAt(0));
+    let out = '';
+    for (let i=0; i< str.length; i++){
+        let code = str.charCodeAt(i);
+    code = code + offset;
+    out += String.fromCharCode(code);
+}
+document.getElementById('4').innerText = out;
+});   
+    </script>
+</body>
+</html>

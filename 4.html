@@ -1,0 +1,101 @@
+<html>
+<head><title>Калькулятор</title>
+
+<script language="JavaScript">
+<!--
+//Поучение пользовательских данных и вычисление результата
+function GetResult(oper)
+{ 
+  var n1 = 0;
+  var n2 = 0;
+    	
+  n1 = eval(calcform.num_01.value);   //Число 1
+  n2 = eval(calcform.num_02.value);   //Число 2
+  
+  switch (oper)                       //Проверяем, какая кнопка
+  {                                   //была нажата
+    case 1:   //Кнопка +
+    {
+      calcform.res.value = Math.trunc(n1 + n2);
+      break;
+    }
+    case 2:   //Кнопка -
+    {
+      calcform.res.value = Math.trunc(n1 - n2);
+      break;
+    }
+    case 3:   //Кнопка *
+    {
+      calcform.res.value = Math.trunc(n1 * n2);
+      break;
+    }
+    case 4:   //Кнопка /
+    {
+      calcform.res.value = Math.trunc(n1 / n2);
+      break;
+    }
+  }
+}
+// -->
+</script>
+
+</head>
+<body>
+
+<h3>Простой калькулятор</h3><hr>
+
+<form name="calcform">
+
+<table border cellpadding = 5 width=350 bgcolor="silver">
+
+<tr>
+  <td>Первый агрумент:</td>
+  <td>
+      <center>
+      <input name="num_01" type="text" size="24" maxlength=16 value="1">
+      </center>
+  </td>
+</tr>
+<tr>
+  <td>Второй агрумент:</td>
+  <td>
+  <center>
+  <input name="num_02" type="text" size="24" maxlength=16 value="1">
+  </center>
+  </td>
+</tr>
+<tr>
+  <td>Результат:</td>
+  <td><center>
+      <input name="res" type="text" size="24" maxlength=0>
+      </center></td>
+</tr>
+
+</table>
+
+<table border cellpadding = 10 width=350>
+
+<tr bgcolor="yellow">
+  <td><center>
+  <input name="btnadd" type="button" value="  +  " onClick="GetResult(1)">
+  </center>
+  </td>
+  <td><center>
+  <input name="btnsub" type="button" value="  -  " onClick="GetResult(2)">
+  </center>
+  </td>
+  <td><center>
+  <input name="btnmul" type="button" value="  *  " onClick="GetResult(3)">
+  </center>
+  </td>
+  <td><center>
+  <input name="btndiv" type="button" value="  /  " onClick="GetResult(4)">
+  </center>
+  </td>
+</tr>
+
+</table>
+
+</form>
+</body>
+</html>

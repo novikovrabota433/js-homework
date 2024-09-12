@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2</title>
+</head>
+<body>
+  
+  <input type="number" id="num">
+  <br>
+  <select id="from"></select> to
+  <select id="to"></select>
+  <br>
+  <br>
+  <span id="result"></span>
+
+<script>
+        var Money = function(symbol, value){
+  this.symbol = symbol;
+  this.value = value;
+}
+
+var arr = [
+  new Money("доллар", 30.1),
+  new Money("рубль", 1),
+  new Money("юань", 0.5),
+  new Money("гривна", 3.3)
+];
+
+
+var numInput = document.getElementById("num");
+var fromSelect = document.getElementById("from");
+var toSelect = document.getElementById("to");
+var resultSpan = document.getElementById("result");
+
+arr.forEach(function(money){
+  var option = document.createElement("option");
+  option.text = money.symbol;
+  fromSelect.add(option);
+  
+  option = option.cloneNode();
+  option.text = money.symbol;
+  toSelect.add(option);
+});
+
+numInput.oninput = fromSelect.oninput = toSelect.oninput = function(event){
+  var money1 = arr[fromSelect.options.selectedIndex];
+  var money2 = arr[toSelect.options.selectedIndex];
+  var num = +numInput.value;
+  if(!numInput.value.length || isNaN(num)){
+    return;
+  }
+  console.log(numInput.value.length)
+  
+  var result = money1.value / money2.value * num;
+  resultSpan.innerHTML = num + " " + money1.symbol + " " + "  =  " + " " + Math.round((result * 1000) / 1000) + " " + money2.symbol;
+}
+    </script>
+</body>
+</html>
