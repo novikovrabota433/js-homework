@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        var digit1 = Number(prompt('Введите первое число')),
+            digit2 = Number(prompt('Введите второе число')),
+            digit3 = Number(prompt('Введите третье число'));
+            digit4 = Number(prompt('Введите четвертое число'));
+                 
+        if(digit1 > digit2 && digit1 > digit3 && digit1 > digit4) {
+            alert(digit1);
+        }
+        else if(digit2 > digit1 && digit2 > digit3 && digit1 > digit4) {
+            alert(digit2);
+        }
+        else if (digit3 > digit1 && digit3 > digit2 && digit3 > digit4)  {
+            alert(digit3);
+        }
+        else if (digit4 > digit1 && digit4 > digit2 && digit4 > digit3)  {
+            alert(digit4);
+        }
+
+        summ = Math.pow(digit1, -1) + Math.pow(digit2, -1) + Math.pow(digit3, -1) + Math.pow(digit4, -1);
+
+        summ2 = summ / 4;
+
+        summ3 = Math.pow(summ2, -1);
+
+        alert('среднее гармоническое этих четырёх чисел =' + summ3);
+
+        
+
+    </script>
+        
+</body>
+</html>

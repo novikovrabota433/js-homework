@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        var digit1 = Number(prompt('Введите первое число')),
+            digit2 = Number(prompt('Введите второе число')),
+            digit3 = Number(prompt('Введите третье число'));
+
+            summ = digit1 + digit2;
+            summ2 = digit1 + digit3;
+            summ3 = digit2 + digit3;
+
+            if(digit1 < summ && digit1 < summ2 && digit1 < summ3 && digit2 < summ && digit2 < summ2 && digit2 < summ3 && digit3 < summ && digit3 < summ2 && digit3 < summ3) {
+                alert("Вы ввели числа привильно");
+            }
+            else{
+                alert("вводите первые от наибольшего к наименьшему ; пример: 7, 4, 3тье число должно быть меньше 7+4 и меньше 7");
+            }
+
+
+    </script>
+        
+</body>
+</html>
