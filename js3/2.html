@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <script>
+        'use strict';
+        
+        function getSecondsToTomorrow(){
+            var d = new Date();
+            var s = d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
+            d.setHours(23, 59, 59, 59);
+            var v = d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
+            var e = (v  - s)/ 60;
+            var r = e.toFixed()
+            return r;
+            }
+        alert("до следущего дня осталось " + getSecondsToTomorrow() + " минут");
+        </script>
+    </body>
+</html>

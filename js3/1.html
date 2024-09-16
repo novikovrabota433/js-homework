@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+var s=prompt("Введите строку");
+
+const findLongestWord = function(s) {
+  let arrStr = s.split(' ');
+  let longestWord = arrStr[0];
+  for (let i = 1; i < arrStr.length; i++) {
+    if (arrStr[i].length > longestWord.length) {
+      longestWord = arrStr[i];
+    }
+  }
+  return longestWord;
+};
+
+alert(findLongestWord('самое длинное слово' + s));
+
+function glasnie (s) {
+   var sa=s.toLowerCase().split(''); // превращает строку в массив из символов
+   var vs="eyuioaEYUIOAуеыаоэяиюУЕЫАОЭЯИЮ";// строка с гласными
+
+   var r = sa.reduce( (sum, val) => {
+      if (vs.indexOf (val) !==-1) { 
+         sum++; // добавляем в кол-во найденных гласных +1
+      }
+      return sum; // Возвращаем новую сумму (или старую, если гласных нет).
+   }, 0); // Запускаем reduce с нулевой суммой
+   return r;
+}
+var rezault=glasnie(s) ;// присваивание переменной значения функции
+alert ("Количество гласных: "+rezault);
+
+</script>
+
+</body>
+</html>
