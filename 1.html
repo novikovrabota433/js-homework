@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    body {
+        margin: 0;
+    }
+        table {
+    border: 1px solid black;
+    padding: 5px 10px;
+    text-align: center;
+    }
+
+        td {
+    border: 1px solid #777;
+    padding: 5px 10px;
+    margin: 10px;
+    text-align: center;
+    }
+
+    td {
+    width: 15px;
+    }
+    </style>
+    <script>
+        n = prompt();
+
+        document.write("<table>");
+ 
+        for (var i = 1; i <= n; i++ ) {
+            document.write("<tr>");
+            document.write("<td>" + i + "</td>");
+  
+        for ( var j = 2; j <= n; j++ ) {
+            document.write("<td>" + i * j + "</td>");
+        }   
+            document.write("</tr>");
+        }
+            document.write("</table>");
+    </script>
+</body>
+</html>

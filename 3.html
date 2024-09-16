@@ -1,0 +1,211 @@
+<html>
+
+<head>
+  <title>Untitled</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+<div id="table-lizing-traktor"></div>
+<script>
+var goods = [
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '82.1',
+					country: {
+						ru:'Беларусь',
+						ua: 'Білорусь',
+					},
+					price: '1.11',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '892',
+					country: {
+						ru:'Беларусь',
+						ua: 'Білорусь',
+					},
+					price: '1.21',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '920',
+					country: {
+						ru:'Беларусь',
+						ua: 'Білорусь',
+					},
+					price: '1.31',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '92П',
+					country: {
+						ru:'Беларусь',
+						ua: 'Білорусь',
+					},
+					price: '1.22',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '922.3',
+					country: {
+						ru:'Беларусь',
+						ua: 'Білорусь',
+					},
+					price: '1.42',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '952.2',
+					country: {
+						ru:'Беларусь',
+						ua: 'Білорусь',
+					},
+					price: '2.42',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '1025.2',
+					country: {
+						ru:'Беларусь',
+						ua: 'Білорусь',
+					},
+					price: '2.22',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '1221.2',
+					country: {
+						ru:'Беларусь',
+						ua: 'Білорусь',
+					},
+					price: '2.24',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '1523.В',
+					country: {
+						ru:'Беларусь',
+						ua: 'Білорусь',
+					},
+					price: '2.16',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '82.1',
+					country: {
+						ru:'Украина',
+						ua: 'Україна',
+					},
+					price: '2.16',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '892',
+					country: {
+						ru:'Украина',
+						ua: 'Україна',
+					},
+					price: '1.85',
+				},
+				{
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '1221.2',
+					country: {
+						ru:'Украина',
+						ua: 'Україна',
+					},
+					price: '1.19',
+				},
+                {
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '1221.2',
+					country: {
+						ru:'Украина',
+						ua: 'Україна',
+					},
+					price: '1.19',
+				},
+                {
+					name: {
+						ru:'МТЗ',
+						ua: 'МТЗ',
+					},
+					model: '1221.2',
+					country: {
+						ru:'Украина',
+						ua: 'Україна',
+					},
+					price: '1.19',
+				},
+			]
+		var countGoods = goods.length;
+
+		var table = document.createElement('table');
+		table.setAttribute('border', '1');
+		table.setAttribute('color', '000');
+		table.setAttribute('width','500');
+		table.setAttribute('height', '300');
+
+		var tbody = document.createElement('tbody');
+        var tr = document.createElement('tr');
+			tr.innerHTML = '<td>Марка техники</td><td>Модель техники</td><td>Страна производитель</td><td>Цена</td>';
+            tbody.appendChild(tr);
+        var items = ['name','model','country','price'], country = 'ru';
+		for(var i = 0; i < countGoods; i++){
+			var tr = document.createElement('tr');
+				for (var j = 0; j < 4; j++) {
+					var td = document.createElement('td');
+                    var item = goods[i][items[j]];
+					td.innerHTML = item[country] ? item[country] : item;
+					tr.appendChild(td);
+				}
+				tbody.appendChild(tr);
+		}
+		table.appendChild(tbody);
+		document.getElementById('table-lizing-traktor').appendChild(table);
+
+
+</script>
+</body>
+
+</html>

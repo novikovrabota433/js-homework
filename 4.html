@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+   
+    
+    <div class="row" id="rezult"></div>
+
+        <style>
+
+        </style>
+
+    <script>
+
+        const items = [{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 10,
+                price: 1000
+            },{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 1000,
+                price: 1000
+            },{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 1000,
+                price: 1000
+            },{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 1000,
+                price: 1000
+            },{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 1000,
+                price: 1000
+            },{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 1000,
+                price: 1000
+            },{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 1000,
+                price: 1000
+            },{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 1000,
+                price: 1000
+            },{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 1000,
+                price: 1000
+            },{
+                img: 'https://cdn2.iconfinder.com/data/icons/jetflat-fruits/90/002_014_banana_banan_plant_herb_fruit_food-128.png',
+                name: 'IMac Pro',
+                name1: 'Супер компьютер',
+                cost: 1000,
+                price: 1000
+            },]
+
+
+        const list = document.getElementById('rezult');
+        items.forEach(({img, name, name1, cost, price}) => {
+            list.insertAdjacentHTML('beforeend', `
+                <div class="col-3">
+                    <img>${img}</img>
+                    <p>${name}</p>
+                    <p>${name1}</p>
+                    <p>${cost}</p>
+                    <p>${price}</p>
+                </div>
+            `);
+        });
+
+    </script>
+
+   
+</body>
+</html>
