@@ -1,0 +1,25 @@
+[{
+    "name": "Orange",
+    "description": "Orange",
+    "img": "http://www.azspagirls.com/files/2010/09/orange.jpg",
+    "nasklade": "73",
+    "price": "0.5",
+    "data-price": "0.5"
+
+}, {    
+    "name": "Banana",
+    "description": "Banana",
+    "img": "http://images.all-free-download.com/images/graphicthumb/vector_illustration_of_ripe_bananas_567893.jpg",
+    "nasklade": "49",
+    "price": "1.22",
+    "data-price": "1.22"
+
+}, {    
+    "name": "Lemon",
+    "description": "Lemon",
+    "img": "https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg",
+    "nasklade": "100",
+    "price": "5",
+    "data-price": "5"
+
+}]
