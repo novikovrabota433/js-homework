@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+    getRandomNumber();
+        function getRandomNumber(){
+	    var x = parseInt (Math.random() * 100),
+		    res = true;
+	
+	    for (var i = 2; i < x; i++){
+		    if(x <= 1 || x % i == 0){
+			    res = false;
+			    break;
+		    }	
+	    };
+
+	    var number = ( x > 1 && res) ? x + " Простое" : x + " Составное";
+	    alert(number);
+    };
+        
+</script>
+
+</body>
+</html> 

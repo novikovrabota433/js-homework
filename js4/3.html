@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+  
+        class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  disance(p1, p2) {
+    return Math.sqrt(((p2.x - p1.x) ** 2) + ((p2.y - p1.y) ** 2));
+  }
+}
+const point = new Point();
+alert (point.disance(new Point(5, 7), new Point(11, 24)));
+</script>
+</body>
+</html>

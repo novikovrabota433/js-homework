@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var chislo = prompt('Введите ко-во массивов');
+        var massive = [];
+        var a = 1;
+
+        //var e = 0;
+        //var n = 0;
+            //while (e < chislo) {
+                   // e++;
+                //if (e == 12) {
+               //continue;
+            //}
+        //n += 1;
+        //}
+
+        for (let i=0; i < chislo; i++) {
+            massive.push({
+                adres_home: "Zvezdi 22", 
+                build_date: "1990",
+                number_floors: chislo,
+                    massive_flat: {
+                        number_rooms: Math.floor(Math.random() * (4- 1)) + 1,
+                        number_residents: Math.floor(Math.random() * (5- 0)) + 0,
+                        total_area: Math.floor(Math.random() * (120- 40)) + 40,
+                        number_flat: 0,
+                        apartment_number: a++
+                    }
+            });
+        }
+
+        console.table(massive);
+
+        array = massive.reduceRight(function(sum, elem) {
+            return[elem.massive_flat.number_residents, ...sum];
+        }, []); 
+        //console.log(array);
+
+        array1 = massive.reduceRight(function(sum, elem) {
+            return[elem.massive_flat.total_area, ...sum];
+        }, []); 
+        //console.log(array1);
+
+        arr3 = [];
+
+        for (i=0; i < massive.length; i++) { // цикл по всем элементам массива(-ов) (в данном случае учитывается что массивы равны по длине)
+	    arr3.push(array[i]*array1[i]); // метод push() добавляет элемент(-ы) в конец массива, в данном случае сумму i-ых элементов первого и второго массивов
+        }
+
+        //console.log(arr3);
+
+        arr33 = []; 
+        
+        for (i=0; i < massive.length; i++) { // цикл по всем элементам массива(-ов) (в данном случае учитывается что массивы равны по длине)
+	    arr33.push( arr3[i] / 2 ); // метод push() добавляет элемент(-ы) в конец массива, в данном случае сумму i-ых элементов первого и второго массивов
+        }
+        
+        //console.log(arr33);
+
+        arr333 = []; 
+        
+        for (i=0; i < massive.length; i++) { // цикл по всем элементам массива(-ов) (в данном случае учитывается что массивы равны по длине)
+	    arr333.push( arr33[i] * (1.85) ); // метод push() добавляет элемент(-ы) в конец массива, в данном случае сумму i-ых элементов первого и второго массивов
+        }
+        
+        //console.log(arr333);
+        
+        
+        stroka = prompt('Введите название месяца: Апрель-Октябрь - обычная тарификация (1); Ноябрь-Март - перевод на зимний режим (1.8) ');
+
+        stroka1 = Math.round(stroka);
+        
+        if ( stroka1 = "Апрель-Октябрь" ){
+            console.log('комуналка Апрель-Октябрь ' + arr33)
+        }
+        else ( stroka1 = "Ноябрь-Март" )
+            console.log('комуналка Ноябрь-Март ' + arr333)
+        
+        
+
+
+        var amount = massive.reduce ((total, person) => {
+            return total + person.massive_flat.total_area
+        }, 0)
+        console.log('сумарная жилая площадь', amount, 'квадратных метра');
+
+        var amount1 = massive.reduce ((total, person) => {
+            return total + person.massive_flat.number_residents
+        }, 0)
+        console.log('всего жильцов', amount1);
+
+        var result = arr333.reduce(function(sum, current) {
+            return sum + current;
+        }, 0);
+        console.log('общая комуналка ', result);
+        
+        var amount3 = amount1/ amount;
+        console.log('Средняя плотность населения', amount3);
+
+
+
+
+
+    </script>
+</body>
+</html>
