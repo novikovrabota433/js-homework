@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <script>
+
+        let items1 = [];
+        let items = [
+  { name: 'Edward', value: 21 },
+  { name: 'Sharpe', value: 37 },
+  { name: 'And', value: 45 },
+  { name: 'The', value: -12 },
+  { name: 'Magnetic' },
+  { name: 'Zeros', value: 37 }
+];
+
+function Sort() {
+
+for (i=0; i < items.length; i++) { // цикл по всем элементам массива(-ов) (в данном случае учитывается что массивы равны по длине)
+    items1.push(items[i]); // метод push() добавляет элемент(-ы) в конец массива, в данном случае сумму i-ых элементов первого и второго массивов
+        }
+        
+items.sort(function (a, b) {
+  if (a.name > b.name) {
+    return 0;
+  }a
+  if (a.name < b.name) {
+    return -1;
+  }
+  // a должно быть равным b
+  return 0;
+});
+
+
+console.log(items1);
+
+console.log(items);
+
+}
+
+Sort();
+    //keys = Object.keys(obj)
+
+    //for (var i = 0, l = keys.length; i < l; i++) {
+        //console.log(keys[i] + ' is ' + obj[keys[i]]);
+  // keys[i] - это ключ
+  // obj[keys[i]] - а это свойство, доступное по этому ключу
+//}
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+<script>
+
+let mainDomen = location.hostname;
+
+let domainString = "orum=6&id_theme=55001 http://www.softtime.ru/forum/read.php?id_forum=6&id_theme=55001";
+let domainString1 = 'ions/4882691/javascript-error-val-m https://stackoverflow.com/questions/4882691/javascript-error-val-match-is-not-a-function'
+
+const result = domainString.match(/https?:\/\/[0-9a-zA-Z-]+\.?[0-9a-zA-Z-]+?\.?[0-9a-zA-Z-]+?\.[a-zA-Z]+/g);
+const result1 = domainString1.match(/https?:\/\/[0-9a-zA-Z-]+\.?[0-9a-zA-Z-]+?\.?[0-9a-zA-Z-]+?\.[a-zA-Z]+/g);
+
+let obj = String(result).match(/[a-zA-Z]+$/);
+let obj1 = String(result1).match(/[a-zA-Z]+$/);
+
+
+alert(obj);
+alert(obj1);
+
+
+</script>
+</body>
+</html>
