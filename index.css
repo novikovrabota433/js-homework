@@ -1,0 +1,110 @@
+body {
+    background-image: url(https://html-templates.info/images/pages/140520040122.jpg);
+    font-family: 'Times New Roman', Times, serif; /* Гарнитура текста */ 
+    font-size: 110%; /* Размер шрифта в процентах */ 
+}
+
+#APP{
+    width: 450px;
+    margin: 0 auto;
+    background-color: rgba(0, 255, 255, 0.678);
+    border-radius: 1%;
+}
+
+#category{
+    display: none;
+}
+
+#type{
+    display: none;
+}
+
+#flags{
+    display: none;
+}
+
+#id{
+    display: none;
+}
+
+#error{
+    display: none;
+}
+
+#delivery{
+    display: none;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#zvezda{
+    display: none;
+}
+
+#favorit{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+#zvezda img{
+    justify-content: flex-end;
+    user-select:none;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+.check{
+    user-select:none;
+}
+
+#zvezda img:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+
+#chbox{
+    display: flex;
+    flex-direction: row;
+}
+
+.check:first-child{
+    display: none;
+}
+
+#results{
+    user-select:none;
+}
+
+#clear{
+    user-select:none;
+}
+
+.data{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#d2 button{
+    background: linear-gradient(90deg, #c600b2, #7619fd);
+}
+
+#d3 button{
+    background: linear-gradient(90deg, #c600b2, #7619fd);
+}
+
+
+
+
+
+
+

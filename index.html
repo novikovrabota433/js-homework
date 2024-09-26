@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Шутка</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='nprogress.js'></script>
+    <link rel='stylesheet' href='nprogress.css'/>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="APP">
+        <div class="data">
+            <div id="d1">
+                <input class="check" id="check-option-0" name="name" type="checkbox" data-select="nsfw" checked>
+                <input class="check" id="check-option-1" name="name" type="checkbox" data-select="religious">religious
+                <input class="check" id="check-option-2" name="name" type="checkbox" data-select="political">political
+                <input class="check" id="check-option-3" name="name" type="checkbox" data-select="racist">racist
+                <input class="check" id="check-option-4" name="name" type="checkbox" data-select="sexist">sexist
+            </div>
+            <div id="d2"><button id="show_favorit">Избраное</button></div>
+            <div id="lengthFavorit"></div>
+            <div id="d3"><button id="clear">Очистить</button></div>
+        </div>
+        <div id="favorit">
+            <br>
+            <hr>
+            <hr>
+        </div>
+        <div id="main">
+            <div id="results"></div>
+            <div id="zvezda"><img src="zvezda.png" alt=""></div>
+        </div>
+    </div>
+</body>
+<script src='index.js'></script>
+</html>
