@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+//var s=prompt("Введите строку");// переменная для ввода строки
+
+var n=prompt("введите число");
+n=parseInt(n);
+if ((n%2==0)&&(n!=2)) // любое четное число - составное
+    alert("Составное число");
+else if (n==2)//число 2 простое
+    alert("Простое число");
+else{ // число нечетное
+     k=Math.round(Math.sqrt(n));
+     flag = false;
+             
+     for(i=2; i<k+1; i++)
+        if(n%i==0)
+        {
+          alert("Составное число");
+          flag = true;
+          break;
+         }
+            
+     if (flag == false)
+      alert("Простое число");
+}
+    </script>
+        
+</body>
+</html>

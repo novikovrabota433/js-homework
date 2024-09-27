@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+//var s=prompt("Введите строку");// переменная для ввода строки
+
+var n=prompt("введите число Фибоначчи");
+
+function fib(n) {
+  let a = 1;
+  let b = 1;
+  for (let i = 3; i <= n; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+}
+
+alert( fib(n) );
+    </script>
+        
+</body>
+</html>

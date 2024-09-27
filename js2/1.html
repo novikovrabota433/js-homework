@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+var s=prompt("Введите строку");// переменная для ввода строки
+
+
+function glasnie (s) {
+   var sa=s.toLowerCase().split(''); // превращает строку в массив из символов
+   var vs="eyuioaEYUIOA";// строка с гласными
+
+   var r = sa.reduce( (sum, val) => {
+      if (vs.indexOf (val) !==-1) { 
+         sum++; // добавляем в кол-во найденных гласных +1
+      }
+      return sum; // Возвращаем новую сумму (или старую, если гласных нет).
+   }, 0); // Запускаем reduce с нулевой суммой
+   return r;
+}
+var rezault=glasnie(s) ;// присваивание переменной значения функции
+alert ("Количество гласных: "+rezault);
+
+function soglasnie (s) {
+   var sa=s.toLowerCase().split(''); // превращает строку в массив из символов
+   var vs="qrtpsdfghjklzxcvbnmQRTPSDFGHJKLZXCVBNM";// строка с гласными
+
+   var r = sa.reduce( (sum, val) => {
+      if (vs.indexOf (val) !==-1) { 
+         sum++; // добавляем в кол-во найденных гласных +1
+      }
+      return sum; // Возвращаем новую сумму (или старую, если гласных нет).
+   }, 0); // Запускаем reduce с нулевой суммой
+   return r;
+}
+var rezault=soglasnie(s) ;// присваивание переменной значения функции
+alert ("Количество согласных: "+rezault);
+
+function specsimvoli (s) {
+   var sa=s.toLowerCase().split(''); // превращает строку в массив из символов
+   var vs="!@#$%^&*(){}:<>?'";// строка с гласными
+
+   var r = sa.reduce( (sum, val) => {
+      if (vs.indexOf (val) !==-1) { 
+         sum++; // добавляем в кол-во найденных гласных +1
+      }
+      return sum; // Возвращаем новую сумму (или старую, если гласных нет).
+   }, 0); // Запускаем reduce с нулевой суммой
+   return r;
+}
+var rezault=specsimvoli(s) ;// присваивание переменной значения функции
+alert ("Количество Спец символов: "+rezault);
+
+function probeli (s) {
+   var sa=s.toLowerCase().split(''); // превращает строку в массив из символов
+   var vs=" ";// строка с гласными
+
+   var r = sa.reduce( (sum, val) => {
+      if (vs.indexOf (val) !==-1) { 
+         sum++; // добавляем в кол-во найденных гласных +1
+      }
+      return sum; // Возвращаем новую сумму (или старую, если гласных нет).
+   }, 0); // Запускаем reduce с нулевой суммой
+   return r;
+}
+var rezault=probeli(s) ;// присваивание переменной значения функции
+alert ("Количество пробелов: "+rezault);
+
+function cifri (s) {
+   var sa=s.toLowerCase().split(''); // превращает строку в массив из символов
+   var vs="1234567890";// строка с гласными
+
+   var r = sa.reduce( (sum, val) => {
+      if (vs.indexOf (val) !==-1) { 
+         sum++; // добавляем в кол-во найденных гласных +1
+      }
+      return sum; // Возвращаем новую сумму (или старую, если гласных нет).
+   }, 0); // Запускаем reduce с нулевой суммой
+   return r;
+}
+var rezault=cifri(s) ;// присваивание переменной значения функции
+alert ("Количество цифр: "+rezault);
+
+alert("Всего символов:" + s.length);
+
+    </script>
+        
+</body>
+</html>

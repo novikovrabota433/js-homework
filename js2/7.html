@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+//var s=prompt("Введите строку");// переменная для ввода строки
+
+var N=prompt("введите число секунд не более 86399");
+
+    var s1 = (((N % 60) / 10) % 6) * 10;
+    var m1 = ((N / 600) % 6) * 10;
+    var m2 = Math.trunc(m1);
+    var h = (N / 3600) % 24;
+    var h1 = Math.trunc(h);
+
+    if( N > 86399 ){
+        alert("Недопустимая величина");
+    }
+
+    alert(h1 + ':' + m2 + ':' + s1);
+
+//alert(m);
+//alert(s);
+    </script>
+        
+</body>
+</html>
