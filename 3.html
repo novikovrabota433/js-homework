@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <div id="contents">
+    <p>
+      
+Таким образом, социально-экономическое развитие играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач! <a href="https://platform.tutoritech.com/#/courses/UFgkhT5SgEKYRwxeUDrA/lessons/DkodCuMM32xCFUWoQmBv">Платформу</a> или посетить <a href="https://www.google.ru/"><i>google</i></a> и узнать о современных стандартах?
+    </p>
+  </fieldset>
+
+  <script>
+    contents.onclick = function(event) {
+
+      function handleLink(href) {
+        let isLeaving = confirm(`Вы действительно хотите перейти по ссылке ${href}?`);
+        if (!isLeaving) return false;
+      }
+
+      let target = event.target.closest('a');
+
+      if (target && contents.contains(target)) {
+        return handleLink(target.getAttribute('href'));
+      }
+    };
+  </script>
+
+</body>
+</html>
